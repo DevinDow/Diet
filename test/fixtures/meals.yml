@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2018-09-21 13:21:10
+  foods: MyString
+  day: one
+
+two:
+  time: 2018-09-21 13:21:10
+  foods: MyString
+  day: two

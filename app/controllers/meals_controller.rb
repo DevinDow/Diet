@@ -1,4 +1,5 @@
 class MealsController < ApplicationController
+  before_action :set_day, only: [:index, :new, :create]
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
 
   # GET /meals
@@ -24,7 +25,7 @@ class MealsController < ApplicationController
   # POST /meals
   # POST /meals.json
   def create
-    @meal = Meal.new(meal_params)
+    @meal = @day.meals.create(meal_params)
 
     respond_to do |format|
       if @meal.save
@@ -63,6 +64,10 @@ class MealsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_day
+      @day = Day.find(params[:day_id])
+    end
+
     def set_meal
       @meal = Meal.find(params[:id])
     end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-09-21
+  plan: MyString
+  fitness: MyString
+  bms: MyString
+  notes: MyText
+
+two:
+  date: 2018-09-21
+  plan: MyString
+  fitness: MyString
+  bms: MyString
+  notes: MyText

@@ -1,0 +1,8 @@
+<%# _meal Partial is meant to be rendered within a table so that each task is a <tr> row.  %>
+
+<tr>
+  <td><%= meal.time %></td>
+  <td><%= meal.foods %></td>
+  <td><%= button_to 'Edit', edit_meal_path(meal), options = { method: :get } %></td>
+  <td><%= button_to 'X', meal, options = { method: :delete, data: { confirm: 'Are you sure?' } } %></td>
+</tr>

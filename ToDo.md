@@ -3,7 +3,6 @@
 - icon
 - Time representation
   - 15/30 min intervals?
-- port for localhost
 
 ### Models
 

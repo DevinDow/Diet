@@ -21,6 +21,7 @@ class MealsController < ApplicationController
   # GET /meals/1/edit
   def edit
     @day = @meal.day
+    puts @meal.inspect
   end
 
   # POST /meals
@@ -76,6 +77,6 @@ class MealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meal_params
-      params.require(:meal).permit(:time, :foods, :day_id)
+      params.require(:meal).permit(:time, :foods, :categories => [])
     end
 end

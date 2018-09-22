@@ -24,6 +24,16 @@
     <%= form.text_field :foods %>
   </div>
 
+  <div class="field">
+    <%= form.label "Veggies" %>
+    <%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Fruits" %>
+    <%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

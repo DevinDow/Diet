@@ -1,21 +1,20 @@
 # Diet TODO
 
+- icon
+- Time representation
+  - 15/30 min intervals?
+- port for localhost
+
 ### Models
-- Users (Devise or build?)
+
 - Days
-  - Date
-  - Plan (string)
-  - Goal (array?)
+  - Categories (array?)
   - Meals
-    - Time
-    - Foods
     - Categories (array?)
-  - Fitness (text?)
-  - Notes (test?)
   - Meds
     - Time
     - text
-  - BMs
+- Users (Devise or build?)
 
 #### Consider
 - Categories (Vegs, Fruits, Proteins, Carbs, Fats, Seeds&Dressings, Oils&NutButters, Water) stored as ([serialize array?](https://stackoverflow.com/questions/23340222/how-to-save-array-to-database-in-rails))

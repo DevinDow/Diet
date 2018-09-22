@@ -1,6 +1,5 @@
 # Diet TODO
 
-- icon
 - Time
   - Time Zone
   - 15/30 min intervals?

@@ -17,14 +17,13 @@
   <tbody>
     <% @days.each do |day| %>
       <tr>
-        <td><%= day.date %></td>
+        <td><%= link_to day.pp, day %></td>
         <td><%= day.plan %></td>
         <td><%= day.fitness %></td>
         <td><%= day.bms %></td>
         <td><%= day.notes %></td>
-        <td><%= link_to 'Show', day %></td>
-        <td><%= link_to 'Edit', edit_day_path(day) %></td>
-        <td><%= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Edit', edit_day_path(day), options = { method: :get } %></td>
+        <td><%= button_to 'X', day, options = { method: :delete, data: { confirm: 'Are you sure?' } } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,7 +1,8 @@
 # Diet TODO
 
 - icon
-- Time representation
+- Time
+  - Time Zone
   - 15/30 min intervals?
 
 ### Models

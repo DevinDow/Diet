@@ -5,7 +5,7 @@
   - Time Zone
   - 15/30 min intervals?
 
-### Models
+## Models
 
 - Days
   - Categories (array?)
@@ -16,8 +16,10 @@
     - text
 - Users (Devise or build?)
 
-#### Consider
+### Consider
+
 - Categories (Vegs, Fruits, Proteins, Carbs, Fats, Seeds&Dressings, Oils&NutButters, Water) stored as ([serialize array?](https://stackoverflow.com/questions/23340222/how-to-save-array-to-database-in-rails))
 
-### Functionality
+## Functionality
+
 - new Day copies previous Day's settings (such as # Proteins, etc)

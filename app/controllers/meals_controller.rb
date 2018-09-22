@@ -20,6 +20,7 @@ class MealsController < ApplicationController
 
   # GET /meals/1/edit
   def edit
+    @day = @meal.day
   end
 
   # POST /meals
@@ -29,7 +30,7 @@ class MealsController < ApplicationController
 
     respond_to do |format|
       if @meal.save
-        format.html { redirect_to @meal, notice: 'Meal was successfully created.' }
+        format.html { redirect_to @meal.day, notice: 'Meal was successfully created.' }
         format.json { render :show, status: :created, location: @meal }
       else
         format.html { render :new }
@@ -43,7 +44,7 @@ class MealsController < ApplicationController
   def update
     respond_to do |format|
       if @meal.update(meal_params)
-        format.html { redirect_to @meal, notice: 'Meal was successfully updated.' }
+        format.html { redirect_to @meal.day, notice: 'Meal was successfully updated.' }
         format.json { render :show, status: :ok, location: @meal }
       else
         format.html { render :edit }

@@ -16,6 +16,16 @@
 </p>
 
 <p>
+  <strong>Meals:</strong>
+</p>
+
+<table>
+  <%= render @day.meals %>
+</table>
+<%= link_to 'New Meal', new_day_meal_path(@day) %>
+
+
+<p>
   <strong>Bms:</strong>
   <%= @day.bms %>
 </p>

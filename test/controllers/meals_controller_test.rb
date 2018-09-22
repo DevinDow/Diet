@@ -6,12 +6,12 @@ class MealsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get meals_url
+    get day_meals_url
     assert_response :success
   end
 
   test "should get new" do
-    get new_meal_url
+    get new_day_meal_url
     assert_response :success
   end
 
@@ -35,7 +35,7 @@ class MealsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update meal" do
     patch meal_url(@meal), params: { meal: { day_id: @meal.day_id, foods: @meal.foods, time: @meal.time } }
-    assert_redirected_to meal_url(@meal)
+    assert_redirected_to day_url(@meal.day)
   end
 
   test "should destroy meal" do

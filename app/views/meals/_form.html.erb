@@ -1,5 +1,6 @@
-<%= form_with(model: @meal, url: @meal.new_record? ? day_meals_path : @meal, local: true) do |form| %>
+<%#= form_with(model: @meal, url: @meal.new_record? ? day_meals_path : @meal, local: true) do |form| %>
 <%# form url: new Meal POSTs to /day/id/meal; update Meal PATCHes to /meal/id; both Controller methods then redirect to /day/id %>
+<%= simple_form_for @meal do |form| %>
   <% if meal.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
@@ -25,13 +26,7 @@
   </div>
 
   <div class="field">
-    <%= form.label "Veggies" %>
-    <%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Fruits" %>
-    <%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %>
+    <%= form.input :categories, as: :array %>
   </div>
 
   <div class="actions">

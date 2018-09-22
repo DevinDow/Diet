@@ -2,10 +2,9 @@ class MealsController < ApplicationController
   before_action :set_day, only: [:index, :new, :create]
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
 
-  # GET /meals
-  # GET /meals.json
+  # GET /days/:day_id/meals
+  # GET /days/:day_id/meals.json
   def index
-    @meals = Meal.all
   end
 
   # GET /meals/1
@@ -13,7 +12,7 @@ class MealsController < ApplicationController
   def show
   end
 
-  # GET /meals/new
+  # GET /days/:day_id/meals/new
   def new
     @meal = Meal.new
   end
@@ -24,8 +23,8 @@ class MealsController < ApplicationController
     puts @meal.inspect
   end
 
-  # POST /meals
-  # POST /meals.json
+  # POST /days/:day_id/meals
+  # POST /days/:day_id/meals.json
   def create
     @meal = @day.meals.create(meal_params)
 

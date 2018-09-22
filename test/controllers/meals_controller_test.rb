@@ -2,25 +2,26 @@ require 'test_helper'
 
 class MealsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @meal = meals(:one)
+    @day = days(:day1)
+    @meal = meals(:breakfast)
   end
 
   test "should get index" do
-    get day_meals_url
+    get day_meals_url(@meal.day)
     assert_response :success
   end
 
   test "should get new" do
-    get new_day_meal_url
+    get new_day_meal_url(@day)
     assert_response :success
   end
 
   test "should create meal" do
     assert_difference('Meal.count') do
-      post meals_url, params: { meal: { day_id: @meal.day_id, foods: @meal.foods, time: @meal.time } }
+      post day_meals_url(@meal.day), params: { meal: { foods: @meal.foods, time: @meal.time } }
     end
 
-    assert_redirected_to meal_url(Meal.last)
+    assert_redirected_to day_url(@meal.day)
   end
 
   test "should show meal" do
@@ -39,10 +40,11 @@ class MealsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy meal" do
+    day = @meal.day
     assert_difference('Meal.count', -1) do
       delete meal_url(@meal)
     end
 
-    assert_redirected_to meals_url
+    assert_redirected_to day_url(day)
   end
 end

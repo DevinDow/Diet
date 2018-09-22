@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  date: 2018-09-21
-  plan: MyString
-  fitness: MyString
-  bms: MyString
-  notes: MyText
+day1:
+  date: 2018-09-01
+  plan: Eat Healthy
+  fitness: Yoga
+  bms: 6am
+  notes: My notes.
 
-two:
-  date: 2018-09-21
-  plan: MyString
-  fitness: MyString
-  bms: MyString
-  notes: MyText
+day2:
+  date: 2018-09-02
+  plan: Exercise
+  fitness: Cardio
+  bms: 6am
+  notes: My looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong notes.

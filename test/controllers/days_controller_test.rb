@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DaysControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @day = days(:one)
+    @day = days(:day1)
   end
 
   test "should get index" do

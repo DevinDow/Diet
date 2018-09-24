@@ -40,3 +40,6 @@
 Gemfile.lock
 .ruby-version
 .ruby-gemset
+
+# Mac .DS_Store
+.DS_Store

@@ -15,10 +15,12 @@ research @builder in /app/input/array_input to put those inside <td>s
   - Day Categories target
 - Users (Devise or build?)
 
-### Consider
-
-- Categories (Vegs, Fruits, Proteins, Carbs, Fats, Seeds&Dressings, Oils&NutButters, Water) stored as ([serialize array?](https://stackoverflow.com/questions/23340222/how-to-save-array-to-database-in-rails))
-
 ## Functionality
 
 - new Day copies previous Day's settings (such as # Proteins, etc)
+
+## UI
+
+- Bootstrap
+  - rails generate simple_form:install --bootstrap
+  

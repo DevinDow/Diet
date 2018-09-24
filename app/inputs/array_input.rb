@@ -7,6 +7,7 @@ class ArrayInput < SimpleForm::Inputs::StringInput
       @builder.text_field(nil, 
                           input_html_options.merge(value: array_el, 
                                                    name: "#{object_name}[#{attribute_name}][]", 
+                                                   step: 0.5,
                                                    style: "width: 50px"))  # this makes the <input style="width:50px">
     end.join.html_safe
   end

@@ -14,27 +14,34 @@
 
   <h2><%= @day.pp %></h2>
 
-  <div class="field">
-    <%= form.label :time %>
-    <%= form.time_select :time %>
-  </div>
+  <table>
+  <thead>
+    <tr>
+      <td><strong><%= form.label :time %></strong></td>
+      <td><strong><%= form.label :foods %></strong></td>
+      <td><strong><%= form.label "Veggies" %></strong></td>
+      <td><strong><%= form.label "Fruits" %></strong></td>
+      <td><strong><%= form.label "Proteins" %></strong></td>
+      <td><strong><%= form.label "Carbs" %></strong></td>
+      <td><strong><%= form.label "Fats" %></strong></td>
+      <td><strong><%= form.label "Seeds" %></strong></td>
+      <td><strong><%= form.label "Oils" %></strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= form.time_select :time %></td>
+      <td><%= form.text_field :foods, options = { style: "width: 500px" } %></td>
+      <td><%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %></td>
+      <td><%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %></td>
+      <td><%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %></td>
+      <td><%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %></td>
+      <td><%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %></td>
+      <td><%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %></td>
+      <td><%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %></td>
+      <td><%= form.submit %></td>
+    </tr>
+  </tbody>
+</table>
 
-  <div class="field">
-    <%= form.label :foods %>
-    <%= form.text_field :foods %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Veggies" %>
-    <%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %>
-  </div>
-
-  <div class="field">
-    <%= form.label "Fruits" %>
-    <%= form.number_field :categories, options = { multiple: true, style: "width: 50px" } %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

@@ -1,9 +1,6 @@
 # Diet TODO
 
-research @builder in /app/input/array_input to put those inside <td>s
-
 - Remove BMs
-- allow decimals in Categories
 
 - Time
   - Time Zone
@@ -23,4 +20,3 @@ research @builder in /app/input/array_input to put those inside <td>s
 
 - Bootstrap
   - rails generate simple_form:install --bootstrap
-  

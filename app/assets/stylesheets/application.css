@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+td.foods {
+  width: 500px;
+}
+
+td.category {
+  text-align: center;
+  width: 50px;
+}

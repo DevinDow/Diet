@@ -1,5 +1,9 @@
 # Diet TODO
 
+- Did editing Categories break?
+- Remove BMs
+- allow decimals in Categories
+
 - Time
   - Time Zone
   - 15/30 min intervals?
@@ -7,12 +11,7 @@
 ## Models
 
 - Days
-  - Categories (array?)
-  - Meals
-    - Categories (array?)
-  - Meds
-    - Time
-    - text
+  - Day Categories target
 - Users (Devise or build?)
 
 ### Consider

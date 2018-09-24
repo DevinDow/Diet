@@ -1,6 +1,7 @@
 # Diet TODO
 
-- Did editing Categories break?
+research @builder in /app/input/array_input to put those inside <td>s
+
 - Remove BMs
 - allow decimals in Categories
 

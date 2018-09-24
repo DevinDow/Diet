@@ -33,13 +33,7 @@
     <tr>
       <td><%= form.time_select :time %></td>
       <td class="foods"><%= form.text_field :foods %></td>
-      <td class="category"><%= form.number_field :categories, options = { multiple: true } %></td>
-      <td class="category"><%= form.number_field :categories, options = { multiple: true } %></td>
-      <td class="category"><%= form.number_field :categories, options = { multiple: true } %></td>
-      <td class="category"><%= form.number_field :categories, options = { multiple: true } %></td>
-      <td class="category"><%= form.number_field :categories, options = { multiple: true } %></td>
-      <td class="category"><%= form.number_field :categories, options = { multiple: true } %></td>
-      <td class="category"><%= form.number_field :categories, options = { multiple: true } %></td>
+      <%= form.input :categories, as: :array %>
       <td><%= form.submit %></td>
     </tr>
   </tbody>

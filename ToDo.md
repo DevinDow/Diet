@@ -1,7 +1,7 @@
 # Diet TODO
 
+- heroku failed
 - Remove BMs
-
 - Time
   - Time Zone
   - 15/30 min intervals?
@@ -11,6 +11,11 @@
 - Days
   - Day Categories target
 - Users (Devise or build?)
+
+## Routes & Views
+
+- remove
+  - day_meals
 
 ## Functionality
 

@@ -1,7 +1,6 @@
 # Diet TODO
 
-- heroku failed
-- Time
+- [Time](https://www.tutorialspoint.com/ruby/ruby_date_time.htm)
   - Time Zone
   - 15/30 min intervals?
 
@@ -10,11 +9,6 @@
 - Days
   - Day Categories target
 - Users (Devise or build?)
-
-## Routes & Views
-
-- remove
-  - day_meals
 
 ## Functionality
 

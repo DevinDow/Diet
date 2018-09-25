@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  # Home
   root to: 'home#index'
 
+  # Days & Meals
   resources :days do
-    resources :meals, shallow: true
+    resources :meals, shallow: true, :except => [:index]
   end
 
 end

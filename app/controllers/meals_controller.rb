@@ -1,11 +1,6 @@
 class MealsController < ApplicationController
-  before_action :set_day, only: [:index, :new, :create]
+  before_action :set_day, only: [:new, :create]
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
-
-  # GET /days/:day_id/meals
-  # GET /days/:day_id/meals.json
-  def index
-  end
 
   # GET /meals/1
   # GET /meals/1.json

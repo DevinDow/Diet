@@ -6,11 +6,6 @@ class MealsControllerTest < ActionDispatch::IntegrationTest
     @breakfast = meals(:breakfast)
   end
 
-  test "should get index" do
-    get day_meals_url(@breakfast.day)
-    assert_response :success
-  end
-
   test "should get new" do
     get new_day_meal_url(@day1)
     assert_response :success

@@ -2,10 +2,9 @@ class MealsController < ApplicationController
   before_action :set_day, only: [:index, :new, :create]
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
 
-  # GET /meals
-  # GET /meals.json
+  # GET /days/:day_id/meals
+  # GET /days/:day_id/meals.json
   def index
-    @meals = Meal.all
   end
 
   # GET /meals/1
@@ -13,7 +12,7 @@ class MealsController < ApplicationController
   def show
   end
 
-  # GET /meals/new
+  # GET /days/:day_id/meals/new
   def new
     @meal = Meal.new
   end
@@ -21,10 +20,11 @@ class MealsController < ApplicationController
   # GET /meals/1/edit
   def edit
     @day = @meal.day
+    puts @meal.inspect
   end
 
-  # POST /meals
-  # POST /meals.json
+  # POST /days/:day_id/meals
+  # POST /days/:day_id/meals.json
   def create
     @meal = @day.meals.create(meal_params)
 
@@ -76,6 +76,6 @@ class MealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meal_params
-      params.require(:meal).permit(:time, :foods, :day_id)
+      params.require(:meal).permit(:time, :foods, :categories => [])
     end
 end

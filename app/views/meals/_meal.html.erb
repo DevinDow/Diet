@@ -2,7 +2,14 @@
 
 <tr>
   <td><%= meal.pp %></td>
-  <td><%= meal.foods %></td>
+  <td class="foods"><%= meal.foods %></td>
+  <td class="category"><%= meal.veggies %></td>
+  <td class="category"><%= meal.fruits %></td>
+  <td class="category"><%= meal.proteins %></td>
+  <td class="category"><%= meal.carbs %></td>
+  <td class="category"><%= meal.fats %></td>
+  <td class="category"><%= meal.seeds %></td>
+  <td class="category"><%= meal.oils %></td>
   <td><%= button_to 'Edit', edit_meal_path(meal), options = { method: :get } %></td>
   <td><%= button_to 'X', meal, options = { method: :delete, data: { confirm: 'Are you sure?' } } %></td>
 </tr>

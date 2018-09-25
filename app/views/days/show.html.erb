@@ -17,7 +17,23 @@
 </p>
 
 <table>
-  <%= render @day.meals %>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Foods</th>
+      <th>Veggies</th>
+      <th>Fruits</th>
+      <th>Proteins</th>
+      <th>Carbs</th>
+      <th>Fats</th>
+      <th>Seeds</th>
+      <th>Oils</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @day.meals %>
+  </tbody>
 </table>
 <%= link_to 'New Meal', new_day_meal_path(@day) %>
 

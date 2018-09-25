@@ -2,12 +2,24 @@
 
 <h2><%= @meal.day.pp %></h2>
 
-<h3><%= @meal.pp %></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Foods</th>
+      <th>Veggies</th>
+      <th>Fruits</th>
+      <th>Proteins</th>
+      <th>Carbs</th>
+      <th>Fats</th>
+      <th>Seeds</th>
+      <th>Oils</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Foods:</strong>
-  <%= @meal.foods %>
-</p>
+  <tbody>
+    <%= render @meal %>
+  </tbody>
+</table>
 
-<%= link_to 'Edit', edit_meal_path(@meal) %> |
 <%= link_to 'Back', day_meals_path(@meal.day) %>

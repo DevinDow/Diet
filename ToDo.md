@@ -1,7 +1,6 @@
 # Diet TODO
 
 - heroku failed
-- Remove BMs
 - Time
   - Time Zone
   - 15/30 min intervals?

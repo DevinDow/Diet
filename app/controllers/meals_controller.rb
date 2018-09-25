@@ -20,7 +20,6 @@ class MealsController < ApplicationController
   # GET /meals/1/edit
   def edit
     @day = @meal.day
-    puts @meal.inspect
   end
 
   # POST /days/:day_id/meals

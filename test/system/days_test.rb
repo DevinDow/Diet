@@ -14,7 +14,6 @@ class DaysTest < ApplicationSystemTestCase
     visit days_url
     click_on "New Day"
 
-    fill_in "Bms", with: @day.bms
     fill_in "Date", with: @day.date
     fill_in "Fitness", with: @day.fitness
     fill_in "Notes", with: @day.notes
@@ -29,7 +28,6 @@ class DaysTest < ApplicationSystemTestCase
     visit days_url
     click_on "Edit", match: :first
 
-    fill_in "Bms", with: @day.bms
     fill_in "Date", with: @day.date
     fill_in "Fitness", with: @day.fitness
     fill_in "Notes", with: @day.notes

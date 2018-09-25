@@ -3,13 +3,13 @@
 <tr>
   <td><%= meal.pp %></td>
   <td class="foods"><%= meal.foods %></td>
-  <td class="category"><%= meal.veggies %></td>
-  <td class="category"><%= meal.fruits %></td>
-  <td class="category"><%= meal.proteins %></td>
-  <td class="category"><%= meal.carbs %></td>
-  <td class="category"><%= meal.fats %></td>
-  <td class="category"><%= meal.seeds %></td>
-  <td class="category"><%= meal.oils %></td>
+  <td class="category"><%= meal.categories[0] %></td>
+  <td class="category"><%= meal.categories[1] %></td>
+  <td class="category"><%= meal.categories[2] %></td>
+  <td class="category"><%= meal.categories[3] %></td>
+  <td class="category"><%= meal.categories[4] %></td>
+  <td class="category"><%= meal.categories[5] %></td>
+  <td class="category"><%= meal.categories[6] %></td>
   <td><%= button_to 'Edit', edit_meal_path(meal), options = { method: :get } %></td>
   <td><%= button_to 'X', meal, options = { method: :delete, data: { confirm: 'Are you sure?' } } %></td>
 </tr>

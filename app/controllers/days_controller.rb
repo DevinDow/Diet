@@ -69,6 +69,6 @@ class DaysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def day_params
-      params.require(:day).permit(:date, :plan, :fitness, :bms, :notes)
+      params.require(:day).permit(:date, :plan, :fitness, :notes)
     end
 end

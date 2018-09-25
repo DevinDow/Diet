@@ -1,8 +1,8 @@
 class Meal < ApplicationRecord
   belongs_to :day
 
-  def pp
-    time.strftime("%I:%M%p %Z")
+  def time_of_day
+    Time.new.at_midnight.advance(minutes: time).strftime("%I:%M%p")
   end
 
 end

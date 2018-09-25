@@ -1,9 +1,5 @@
 # Diet TODO
 
-- [Time](https://www.tutorialspoint.com/ruby/ruby_date_time.htm)
-  - Time Zone
-  - 15/30 min intervals?
-
 ## Models
 
 - Days
@@ -18,3 +14,7 @@
 
 - Bootstrap
   - rails generate simple_form:install --bootstrap
+
+## DB
+
+- add an Index for Days by ID

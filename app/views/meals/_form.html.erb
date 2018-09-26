@@ -15,27 +15,27 @@
   <h2><%= @day.pp %></h2>
 
   <table>
-  <thead>
-    <tr>
-      <td><strong><%= form.label :time %></strong></td>
-      <td><strong><%= form.label :foods %></strong></td>
-      <td><strong><%= form.label "Veggies" %></strong></td>
-      <td><strong><%= form.label "Fruits" %></strong></td>
-      <td><strong><%= form.label "Proteins" %></strong></td>
-      <td><strong><%= form.label "Carbs" %></strong></td>
-      <td><strong><%= form.label "Fats" %></strong></td>
-      <td><strong><%= form.label "Seeds" %></strong></td>
-      <td><strong><%= form.label "Oils" %></strong></td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= form.input :time %></td>
-      <td class="foods"><%= form.text_field :foods %></td>
-      <%= form.input :categories, as: :array %>
-      <td><%= form.submit %></td>
-    </tr>
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <td><strong><%= form.label :time %></strong></td>
+        <td><strong><%= form.label :foods %></strong></td>
+        <td><strong><%= form.label "Veggies" %></strong></td>
+        <td><strong><%= form.label "Fruits" %></strong></td>
+        <td><strong><%= form.label "Proteins" %></strong></td>
+        <td><strong><%= form.label "Carbs" %></strong></td>
+        <td><strong><%= form.label "Fats" %></strong></td>
+        <td><strong><%= form.label "Seeds" %></strong></td>
+        <td><strong><%= form.label "Oils" %></strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= form.input :time %></td>
+        <td class="foods"><%= form.text_field :foods %></td>
+        <%= form.input :categories, as: :array %>
+        <td><%= form.submit %></td>
+      </tr>
+    </tbody>
+  </table>
 
 <% end %>

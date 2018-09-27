@@ -10,6 +10,7 @@ class MealsController < ApplicationController
   # GET /days/:day_id/meals/new
   def new
     @meal = Meal.new
+    @meal.time_of_day = Time.new
   end
 
   # GET /meals/1/edit
@@ -37,6 +38,10 @@ class MealsController < ApplicationController
   # PATCH/PUT /meals/1.json
   def update
     respond_to do |format|
+      puts params.inspect
+      puts params[:meal].inspect
+      puts "** meals#update time_of_day=#{params[:meal][:time_of_day]}"
+      @meal.time_of_day = params[:meal][:time_of_day]
       if @meal.update(meal_params)
         format.html { redirect_to @meal.day, notice: 'Meal was successfully updated.' }
         format.json { render :show, status: :ok, location: @meal }
@@ -70,6 +75,6 @@ class MealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meal_params
-      params.require(:meal).permit(:time, :foods, :categories => [])
+      params.require(:meal).permit(:time, :time_of_day, :foods, :categories => [])
     end
 end

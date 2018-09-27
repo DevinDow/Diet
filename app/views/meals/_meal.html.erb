@@ -1,7 +1,5 @@
-<%# _meal Partial is meant to be rendered within a table so that each meal is a <tr> row.  %>
-
 <tr>
-  <td><%= meal.time_of_day %></td>
+  <td class="time"><%= meal.time_string %></td>
   <td class="foods"><%= meal.foods %></td>
   <td class="category"><%= meal.categories[0] %></td>
   <td class="category"><%= meal.categories[1] %></td>

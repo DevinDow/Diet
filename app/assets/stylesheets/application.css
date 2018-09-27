@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ td.time {
+  width: 100px;
+}
+
 td.foods, td.foods input {
   width: 500px;
 }

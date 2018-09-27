@@ -29,7 +29,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><%= form.input_field :time %></td>
+        <td class="time"><%= form.time_select :time_of_day %></td>
         <td class="foods"><%= form.text_field :foods %></td>
         <%= form.input_field :categories, as: :array %>
         <td><%= form.submit %></td>

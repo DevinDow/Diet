@@ -6,7 +6,7 @@ class Meal < ApplicationRecord
   end
 
   def time_of_day=(val)
-    time = (val - Time.new.at_midnight) / 60
+    self.time = ((val - Time.new.at_midnight) / 60).floor
   end
 
   def time_string

@@ -10,6 +10,7 @@ class MealsController < ApplicationController
   # GET /days/:day_id/meals/new
   def new
     @meal = Meal.new
+    @meal.time_of_day = Time.new
   end
 
   # GET /meals/1/edit

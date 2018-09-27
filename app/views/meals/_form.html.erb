@@ -1,4 +1,3 @@
-<%# new Meal POSTs to /day/id/meal; update Meal PATCHes to /meal/id; both Controller methods then redirect to /day/id %>
 <%= simple_form_for(@meal, url: @meal.new_record? ? day_meals_path : @meal) do |form| %>
   <% if meal.errors.any? %>
     <div id="error_explanation">
@@ -30,9 +29,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><%= form.input :time %></td>
+        <td><%= form.input_field :time %></td>
         <td class="foods"><%= form.text_field :foods %></td>
-        <%= form.input :categories, as: :array %>
+        <%= form.input_field :categories, as: :array %>
         <td><%= form.submit %></td>
       </tr>
     </tbody>

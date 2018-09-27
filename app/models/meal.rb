@@ -2,12 +2,11 @@ class Meal < ApplicationRecord
   belongs_to :day
 
   def time_of_day
-    Time.new.at_midnight.advance(minutes: time).strftime("%I:%M%p")
     Time.new.at_midnight.advance(minutes: time || 0)
   end
 
   def time_of_day=(val)
-    @time = (val - Time.new.at_midnight) / 60
+    time = (val - Time.new.at_midnight) / 60
   end
 
   def time_string

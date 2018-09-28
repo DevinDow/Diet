@@ -1,9 +1,5 @@
 # Diet TODO
 
-- [Time](https://www.tutorialspoint.com/ruby/ruby_date_time.htm)
-  - Time Zone
-  - 15/30 min intervals?
-
 ## Models
 
 - Days

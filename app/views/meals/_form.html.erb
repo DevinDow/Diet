@@ -1,4 +1,3 @@
-<%# new Meal POSTs to /day/id/meal; update Meal PATCHes to /meal/id; both Controller methods then redirect to /day/id %>
 <%= simple_form_for(@meal, url: @meal.new_record? ? day_meals_path : @meal) do |form| %>
   <% if meal.errors.any? %>
     <div id="error_explanation">
@@ -15,27 +14,27 @@
   <h2><%= @day.pp %></h2>
 
   <table>
-  <thead>
-    <tr>
-      <td><strong><%= form.label :time %></strong></td>
-      <td><strong><%= form.label :foods %></strong></td>
-      <td><strong><%= form.label "Veggies" %></strong></td>
-      <td><strong><%= form.label "Fruits" %></strong></td>
-      <td><strong><%= form.label "Proteins" %></strong></td>
-      <td><strong><%= form.label "Carbs" %></strong></td>
-      <td><strong><%= form.label "Fats" %></strong></td>
-      <td><strong><%= form.label "Seeds" %></strong></td>
-      <td><strong><%= form.label "Oils" %></strong></td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= form.time_select :time %></td>
-      <td class="foods"><%= form.text_field :foods %></td>
-      <%= form.input :categories, as: :array %>
-      <td><%= form.submit %></td>
-    </tr>
-  </tbody>
-</table>
+    <thead>
+      <tr>
+        <td><strong><%= form.label "Time (minutes since midnight)" %></strong></td>
+        <td><strong><%= form.label :foods %></strong></td>
+        <td><strong><%= form.label "Veggies" %></strong></td>
+        <td><strong><%= form.label "Fruits" %></strong></td>
+        <td><strong><%= form.label "Proteins" %></strong></td>
+        <td><strong><%= form.label "Carbs" %></strong></td>
+        <td><strong><%= form.label "Fats" %></strong></td>
+        <td><strong><%= form.label "Seeds" %></strong></td>
+        <td><strong><%= form.label "Oils" %></strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="time"><%= form.input_field :minutes_since_midnight %> = <%= @meal.time_string  %></td>
+        <td class="foods"><%= form.text_field :foods %></td>
+        <%= form.input_field :categories, as: :array %>
+        <td><%= form.submit %></td>
+      </tr>
+    </tbody>
+  </table>
 
 <% end %>

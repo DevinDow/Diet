@@ -10,12 +10,9 @@ class MealsController < ApplicationController
   # GET /days/:day_id/meals/new
   def new
     @meal = Meal.new
-    @meal.time_of_day = Time.new.in_time_zone 'Pacific Time (US & Canada)'
+    @meal.time_of_day = Time.zone.now
     puts @meal.time_of_day
     puts @meal.time_of_day.zone
-    t = Time.zone.now
-    puts t
-    puts t.zone
   end
 
   # GET /meals/1/edit

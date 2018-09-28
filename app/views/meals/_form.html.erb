@@ -16,7 +16,7 @@
   <table>
     <thead>
       <tr>
-        <td><strong><%= form.label :time %></strong></td>
+        <td><strong><%= form.label :minutes_since_midnight %></strong></td>
         <td><strong><%= form.label :foods %></strong></td>
         <td><strong><%= form.label "Veggies" %></strong></td>
         <td><strong><%= form.label "Fruits" %></strong></td>
@@ -29,7 +29,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><%= form.input_field :time %></td>
+        <td><%= form.input_field :minutes_since_midnight %></td>
         <td class="foods"><%= form.text_field :foods %></td>
         <%= form.input_field :categories, as: :array %>
         <td><%= form.submit %></td>

@@ -16,7 +16,7 @@ class MealsTest < ApplicationSystemTestCase
 
     fill_in "Day", with: @meal.day_id
     fill_in "Foods", with: @meal.foods
-    fill_in "Time", with: @meal.time
+    fill_in "Time", with: @meal.minutes_since_midnight
     click_on "Create Meal"
 
     assert_text "Meal was successfully created"
@@ -29,7 +29,7 @@ class MealsTest < ApplicationSystemTestCase
 
     fill_in "Day", with: @meal.day_id
     fill_in "Foods", with: @meal.foods
-    fill_in "Time", with: @meal.time
+    fill_in "Time", with: @meal.minutes_since_midnight
     click_on "Update Meal"
 
     assert_text "Meal was successfully updated"

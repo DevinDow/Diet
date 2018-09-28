@@ -68,10 +68,12 @@ class MealsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_day
       @day = Day.find(params[:day_id])
+      puts @day.inspect
     end
 
     def set_meal
       @meal = Meal.find(params[:id])
+      puts @meal.inspect
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

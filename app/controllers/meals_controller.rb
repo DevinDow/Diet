@@ -11,6 +11,11 @@ class MealsController < ApplicationController
   def new
     @meal = Meal.new
     @meal.time_of_day = Time.new
+    puts @meal.time_of_day
+    puts @meal.time_of_day.zone
+    t = Time.zone.now
+    puts t
+    puts t.zone
   end
 
   # GET /meals/1/edit

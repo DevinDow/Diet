@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Days & Meals
   get 'today', to: 'days#today'
   resources :days do
-    resources :meals, shallow: true, :except => [:index]
+    resources :meals, shallow: true
   end
 
 end

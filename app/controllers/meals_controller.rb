@@ -1,6 +1,14 @@
 class MealsController < ApplicationController
-  before_action :set_day, only: [:new, :create]
+  before_action :set_day, only: [:index, :new, :create]
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
+
+  # GET /days/:day_id/meals/1
+  # GET /days/:day_id/meals/1.json
+  def index
+    puts "index"
+    @meals = @day.meals.order(:minutes_since_midnight).all
+    puts @meals
+  end
 
   # GET /meals/1
   # GET /meals/1.json

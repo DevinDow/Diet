@@ -1,5 +1,13 @@
 # Diet TODO
 
+## Vue SPA
+
+- Fetch Today
+  - add GET /today.json
+    - might need to create new Day
+      - need to worry about TimeZone
+        - JS pass in browser's current Date Time
+
 ## Time Selection
 
 - <select> https://vuejs.org/v2/guide/forms.html#Select-Options

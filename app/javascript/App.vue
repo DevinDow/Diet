@@ -1,22 +1,40 @@
 <template>
-  <div id="app">
-    <p>{{ message }}</p>
+  <div id="today">
+    <Day v-bind:day="day" />
   </div>
 </template>
 
 <script>
+import Day from './Day.vue'
+import * as APIs from './apis.js'
 export default {
+  components: {
+    Day
+  },
+
   data: function () {
     return {
-      message: "Hello Vue!"
+      day: {}
+    }
+  },
+
+  mounted: function () {
+    console.log("**App MOUNTED**")
+    console.log(this)
+    this.fetchToday()
+  },
+
+  methods: {
+    fetchToday() {
+      APIs.fetchToday(this.setDay)
+    },
+
+    setDay(day) {
+      this.day = day
     }
   }
 }
 </script>
 
 <style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
 </style>

@@ -11,15 +11,6 @@ class DaysController < ApplicationController
   # GET /today.json
   def today
     @day = Day.last
-    respond_to do |format|
-      if @day
-        format.html { redirect_to @day }
-        format.json { render :show, status: :ok, location: @day }
-      else
-        format.html { render :edit }
-        format.json { render json: @day.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # GET /days/1

@@ -1,6 +1,6 @@
 <template>
   <div class="day container">
-    <h2><a v-bind:href="'/days/'+day.id">{{ day.date }}</a></h2>
+    <h2><a v-bind:href="'/days/'+day.id">{{ day.pp }}</a></h2>
     <div class="plan">Plan = {{ day.plan }}</div>
     <div class="fitness">Fitness = {{ day.fitness }}</div>
     <Meal v-for="meal in meals"

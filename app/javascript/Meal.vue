@@ -8,7 +8,7 @@
       <button type="button" @click="$emit('delete', meal_edit)" data-confirm="Are you sure?">Delete</button>
     </form>
     <div v-else v-bind="attrs">
-      <span class="minutes_since_midnight">Time = {{ meal.minutes_since_midnight }}</span>
+      <span class="time">{{ meal.time_string }}</span>
       <span class="foods">Foods = {{ meal.foods }}</span>
       <button @click="startEditing">Edit</button>
       <button @click="$emit('delete', meal)" data-confirm="Are you sure?">Delete</button>

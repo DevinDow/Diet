@@ -10,7 +10,10 @@ class MealsController < ApplicationController
   # GET /days/:day_id/meals/new
   def new
     @meal = Meal.new
-    @meal.time_of_day = Time.new
+    Time.zone = 'Pacific Time (US & Canada)'
+    @meal.time_of_day = Time.zone.now
+    puts @meal.time_of_day
+    puts @meal.time_of_day.zone
   end
 
   # GET /meals/1/edit
@@ -63,10 +66,12 @@ class MealsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_day
       @day = Day.find(params[:day_id])
+      puts @day.inspect
     end
 
     def set_meal
       @meal = Meal.find(params[:id])
+      puts @meal.inspect
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

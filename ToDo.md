@@ -1,5 +1,9 @@
 # Diet TODO
 
+## Time Selection
+
+- <select> https://vuejs.org/v2/guide/forms.html#Select-Options
+
 ## Models
 
 - Days

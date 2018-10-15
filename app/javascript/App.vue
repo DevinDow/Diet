@@ -1,6 +1,6 @@
 <template>
   <div id="today">
-    <Day v-bind:day="day" />
+    <Day v-if="day" v-bind:day="day" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 
   data: function () {
     return {
-      day: {}
+      day: null
     }
   },
 
@@ -30,6 +30,8 @@ export default {
     },
 
     setDay(day) {
+      console.log("setting App.day = " + day)
+      console.log(day)
       this.day = day
     }
   }

@@ -5,9 +5,7 @@ class MealsController < ApplicationController
   # GET /days/:day_id/meals/1
   # GET /days/:day_id/meals/1.json
   def index
-    puts "index"
     @meals = @day.meals.order(:minutes_since_midnight).all
-    puts @meals
   end
 
   # GET /meals/1

@@ -39,7 +39,6 @@ export default {
 
   methods: {
     fetchMeals() {
-      console.log("fetchMeals() " + this.$props.day.id)
       console.log(this.$props.day)
       if (this.$props.day.id) {
         APIs.fetchMeals(this.$props.day.id, this.setMeals)

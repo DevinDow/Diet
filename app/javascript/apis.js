@@ -18,7 +18,7 @@ export function fetchToday(setDay) {
 }
 
 export function fetchMeals(dayID, setMeals) {
-  console.log("fetching Meals")
+  console.log("fetching Meals for Day #" + dayID)
   fetch('/days/'+dayID+'/meals.json')
     .then((response) => {
       return response.json()

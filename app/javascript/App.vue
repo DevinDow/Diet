@@ -30,8 +30,6 @@ export default {
     },
 
     setDay(day) {
-      console.log("setting App.day = " + day)
-      console.log(day)
       this.day = day
     }
   }

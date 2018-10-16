@@ -10,7 +10,7 @@ class DaysController < ApplicationController
   # GET /today
   # GET /today.json
   def today
-    @day = Day.last
+    @day = Day.order(:date).last
   end
 
   # GET /days/1

@@ -7,6 +7,19 @@ class DaysController < ApplicationController
     @days = Day.all
   end
 
+  # GET /today
+  # GET /today.json
+  def today
+    puts params[:date]
+    @day = Day.where(date: params[:date]).first # find today by date passed in from JS
+    puts @day.inspect
+    if !@day
+      @day = Day.new(date: params[:date]) # create today
+      @day.save()
+      puts @day.inspect
+    end
+    end
+
   # GET /days/1
   # GET /days/1.json
   def show

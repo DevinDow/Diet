@@ -1,7 +1,13 @@
 # Diet TODO
 
+## Vue SPA
+
+- Edit Today's Plan, Fitness, Notes, Totals
+- Delete data-confirm="Are you sure?" happens after $emit(), so doesn't cancel
+
 ## Time Selection
 
+- JS pass in time
 - <select> https://vuejs.org/v2/guide/forms.html#Select-Options
 
 ## Models
@@ -13,11 +19,6 @@
 ## Functionality
 
 - new Day copies previous Day's settings (such as # Proteins, etc)
-
-## UI
-
-- Bootstrap
-  - rails generate simple_form:install --bootstrap
 
 ## DB
 

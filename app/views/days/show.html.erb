@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @day.pp %></h2>
+<h2><%= @day.day_string %></h2>
 
 <p>
   <strong>Plan:</strong>
@@ -19,22 +19,32 @@
 <table>
   <thead>
     <tr>
-      <th>Time</th>
-      <th>Foods</th>
-      <th>Veggies</th>
-      <th>Fruits</th>
-      <th>Proteins</th>
-      <th>Carbs</th>
-      <th>Fats</th>
-      <th>Seeds</th>
-      <th>Oils</th>
+      <th class="time">Time</th>
+      <th class="foods">Foods</th>
+      <th class="category veggies">Veggies</th>
+      <th class="category fruits">Fruits</th>
+      <th class="category proteins">Proteins</th>
+      <th class="category carbs">Carbs</th>
+      <th class="category fats">Fats</th>
+      <th class="category seeds">Seeds</th>
+      <th class="category oils">Oils</th>
     </tr>
   </thead>
 
   <tbody>
     <%= render @day.meals %>
+    <td class="time total">TOTALS</td>
+    <td class="foods"></td>
+    <td class="category veggies total"><%= @day.totals[0] %></td>
+    <td class="category fruits total"><%= @day.totals[1] %></td>
+    <td class="category proteins total"><%= @day.totals[2] %></td>
+    <td class="category carbs total"><%= @day.totals[3] %></td>
+    <td class="category fats total"><%= @day.totals[4] %></td>
+    <td class="category seeds total"><%= @day.totals[5] %></td>
+    <td class="category oils total"><%= @day.totals[6] %></td>
   </tbody>
 </table>
+
 <%= link_to 'New Meal', new_day_meal_path(@day) %>
 
 <p>

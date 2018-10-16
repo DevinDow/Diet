@@ -1,13 +1,13 @@
 <tr>
   <td class="time"><%= meal.time_string %></td>
   <td class="foods"><%= meal.foods %></td>
-  <td class="category"><%= meal.categories[0] %></td>
-  <td class="category"><%= meal.categories[1] %></td>
-  <td class="category"><%= meal.categories[2] %></td>
-  <td class="category"><%= meal.categories[3] %></td>
-  <td class="category"><%= meal.categories[4] %></td>
-  <td class="category"><%= meal.categories[5] %></td>
-  <td class="category"><%= meal.categories[6] %></td>
+  <td class="category veggies"><%= meal.categories[0] %></td>
+  <td class="category fruits"><%= meal.categories[1] %></td>
+  <td class="category proteins"><%= meal.categories[2] %></td>
+  <td class="category carbs"><%= meal.categories[3] %></td>
+  <td class="category fats"><%= meal.categories[4] %></td>
+  <td class="category seeds"><%= meal.categories[5] %></td>
+  <td class="category oils"><%= meal.categories[6] %></td>
   <td><%= button_to 'Edit', edit_meal_path(meal), options = { method: :get } %></td>
   <td><%= button_to 'X', meal, options = { method: :delete, data: { confirm: 'Are you sure?' } } %></td>
 </tr>

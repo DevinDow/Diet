@@ -1,8 +1,5 @@
 # Diet TODO
 
-## Issues
-- totals undefined in Days#show
-
 ## Vue SPA
 
 - Edit Today's Plan, Fitness, Notes, Totals

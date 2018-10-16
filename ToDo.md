@@ -7,7 +7,6 @@
 
 ## Time Selection
 
-- JS pass in time
 - <select> https://vuejs.org/v2/guide/forms.html#Select-Options
 
 ## Models

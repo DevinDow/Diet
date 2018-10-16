@@ -29,7 +29,10 @@ export default {
   methods: {
     startCreating() {
       this.creating=true
-      this.meal = { "categories": [0,0,0,0,0,0,0] }
+      var date = new Date(Date.now())
+      console.log(date.getHours() + ":" + date.getMinutes())
+      var minutes_since_midnight = date.getHours() * 60 + date.getMinutes()
+      this.meal = { "minutes_since_midnight": minutes_since_midnight, "categories": [0,0,0,0,0,0,0] }
       this.$nextTick(() => this.$refs.foods.focus())
     }
   }

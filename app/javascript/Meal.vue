@@ -11,7 +11,7 @@
       <td><input class="category oils" type="number" ref="oils" v-model="meal_edit.categories[6]" step="0.5" /></td>
       <td><button type="submit" @click="$emit('update', meal_edit); editing=false">Submit</button></td>
       <td><button type="button" @click="editing=false">Cancel</button></td>
-      <td><button type="button" @click="$emit('delete', meal_edit)" data-confirm="Are you sure?">Delete</button></td>
+      <td><button type="button" @click="$emit('delete', meal_edit)">Delete</button></td>
   </tr>
 
   <tr v-else>

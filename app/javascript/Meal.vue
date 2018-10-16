@@ -1,6 +1,6 @@
 <template>
   <tr v-if="editing">
-      <td><input class="minutes_since_midnight" type="number" v-model="meal_edit.minutes_since_midnight" /></td>
+      <td><input class="time" type="number" v-model="meal_edit.minutes_since_midnight" /></td>
       <td><input class="foods" ref="foods" v-model="meal_edit.foods" /></td>
       <td><input class="category veggies" type="number" ref="veggies" v-model="meal_edit.categories[0]" step="0.5" /></td>
       <td><input class="category fruits" type="number" ref="fruits" v-model="meal_edit.categories[1]" step="0.5" /></td>

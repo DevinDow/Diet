@@ -11,8 +11,9 @@
 
 ## Models
 
-- Days
-  - Day Categories target
+* Days
+  * Day Categories Target
+  * Day Categories Remaining 
 - Users (Devise or build?)
 
 ## Functionality

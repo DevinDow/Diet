@@ -2,11 +2,9 @@
 
 ## Vue SPA
 
-- Fetch Today
-  - add GET /today.json
-    - might need to create new Day
-      - need to worry about TimeZone
-        - JS pass in browser's current Date Time
+- GET /today.json might need to create new Day
+  - need to worry about TimeZone
+    - JS pass in browser's current Date Time
 
 ## Time Selection
 
@@ -21,11 +19,6 @@
 ## Functionality
 
 - new Day copies previous Day's settings (such as # Proteins, etc)
-
-## UI
-
-- Bootstrap
-  - rails generate simple_form:install --bootstrap
 
 ## DB
 

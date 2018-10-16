@@ -19,13 +19,13 @@
         v-on:delete="onDeleteMeal" />
       <td class="time total">TOTALS</td>
       <td class="foods"></td>
-      <td class="category veggies total">{{ day.totals[0] }}</td>
-      <td class="category fruits total">{{ day.totals[1] }}</td>
-      <td class="category proteins total">{{ day.totals[2] }}</td>
-      <td class="category carbs total">{{ day.totals[3] }}</td>
-      <td class="category fats total">{{ day.totals[4] }}</td>
-      <td class="category seeds total">{{ day.totals[5] }}</td>
-      <td class="category oils total">{{ day.totals[6] }}</td>
+      <td class="category veggies total">{{ totals[0] }}</td>
+      <td class="category fruits total">{{ totals[1] }}</td>
+      <td class="category proteins total">{{ totals[2] }}</td>
+      <td class="category carbs total">{{ totals[3] }}</td>
+      <td class="category fats total">{{ totals[4] }}</td>
+      <td class="category seeds total">{{ totals[5] }}</td>
+      <td class="category oils total">{{ totals[6] }}</td>
     </table>
     <NewMeal v-on:create="onCreateMeal" />
   </div>
@@ -45,7 +45,8 @@ export default {
 
   data: function () {
     return {
-      meals: []
+      meals: [], 
+      totals: [0, 0, 0, 0, 0, 0, 0]
     }
   },
 
@@ -65,6 +66,7 @@ export default {
 
     setMeals(meals) {
       this.meals = meals
+      this.updateTotals()
     },
 
     onCreateMeal(meal) {
@@ -83,6 +85,18 @@ export default {
       console.log("*** onDeleteMeal()")
       console.log(meal)
       APIs.deleteMeal(meal.id, this.fetchMeals)
+    },
+
+    updateTotals() {
+      this.totals = [0, 0, 0, 0, 0, 0, 0]
+      var m
+      for (m=0; m<this.meals.length; m++) {
+        var meal = this.meals[m]
+        var c
+        for (c=0; c<=6; c++) {
+          this.totals[c] =  (parseFloat(this.totals[c]) + parseFloat(meal.categories[c])).toFixed(1)
+        }
+      }        
     }
   }
 }

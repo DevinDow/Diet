@@ -1,12 +1,19 @@
 <template>
   <tr v-if="editing">
-    <form class="meal" @submit.prevent="$emit('update', meal_edit); editing=false" @keydown.esc="editing=false">
       <td><input class="minutes_since_midnight" type="number" v-model="meal_edit.minutes_since_midnight" /></td>
-      <input class="foods" ref="foods" v-model="meal_edit.foods" />
-      <button type="submit">Submit</button>
-      <button type="button" @click="editing=false">Cancel</button>
-      <button type="button" @click="$emit('delete', meal_edit)" data-confirm="Are you sure?">Delete</button>
-    </form>
+      <td><input class="foods" ref="foods" v-model="meal_edit.foods" /></td>
+      <td><input class="category veggies" type="number" ref="veggies" v-model="meal_edit.categories[0]" step="0.5" /></td>
+      <td><input class="category fruits" type="number" ref="fruits" v-model="meal_edit.categories[1]" step="0.5" /></td>
+      <td><input class="category proteins" type="number" ref="proteins" v-model="meal_edit.categories[2]" step="0.5" /></td>
+      <td><input class="category carbs" type="number" ref="carbs" v-model="meal_edit.categories[3]" step="0.5" /></td>
+      <td><input class="category fats" type="number" ref="fats" v-model="meal_edit.categories[4]" step="0.5" /></td>
+      <td><input class="category seeds" type="number" ref="seeds" v-model="meal_edit.categories[5]" step="0.5" /></td>
+      <td><input class="category oils" type="number" ref="oils" v-model="meal_edit.categories[6]" step="0.5" /></td>
+      <td>
+        <button type="submit" @click="$emit('update', meal_edit); editing=false">Submit</button>
+        <button type="button" @click="editing=false">Cancel</button>
+        <button type="button" @click="$emit('delete', meal_edit)" data-confirm="Are you sure?">Delete</button>
+      </td>
   </tr>
 
   <tr v-else>
@@ -19,15 +26,18 @@
     <td class="category fats">{{ meal.categories[4] }}</td>
     <td class="category seeds">{{ meal.categories[5] }}</td>
     <td class="category oils">{{ meal.categories[6] }}</td>
-    <td><button @click="startEditing">Edit</button></td>
-    <td><button @click="$emit('delete', meal)" data-confirm="Are you sure?">Delete</button></td>
+    <td>
+      <button @click="startEditing">Edit</button>
+      <button @click="$emit('delete', meal)" data-confirm="Are you sure?">Delete</button>
+    </td>
   </tr>
 </template>
 
 <script>
 export default {
   props: [
-    "meal"
+    "meal", 
+    "onMealUpdated"
   ],
 
   data: function () {

@@ -4,13 +4,13 @@
       <tr>
         <th class="time">Time</th>
         <th class="foods">Foods</th>
-        <th class="category">Veggies</th>
-        <th class="category">Fruits</th>
-        <th class="category">Proteins</th>
-        <th class="category">Carbs</th>
-        <th class="category">Fats</th>
-        <th class="category">Seeds</th>
-        <th class="category">Oils</th>
+        <th class="category veggies">Veggies</th>
+        <th class="category fruits">Fruits</th>
+        <th class="category proteins">Proteins</th>
+        <th class="category carbs">Carbs</th>
+        <th class="category fats">Fats</th>
+        <th class="category seeds">Seeds</th>
+        <th class="category oils">Oils</th>
       </tr>
       <Meal v-for="meal in meals"
         v-bind:meal="meal"

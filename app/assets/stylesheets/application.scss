@@ -18,19 +18,6 @@
 @import 'days.scss';
 @import 'meals.scss';
  
-td.time input {
-  width: 50px;
-}
-
-td.foods, td.foods input {
-  width: 500px;
-}
-
-td.category, td.category input {
-  text-align: center;
-  width: 50px;
-}
-
 .debug_dump {
   clear: both;
   float: left;

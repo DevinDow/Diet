@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import Day from './Day.vue'
-import * as APIs from './apis.js'
+import Day from 'Day.vue'
+import * as APIs from 'apis.js'
 export default {
   components: {
     Day

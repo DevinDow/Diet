@@ -1,19 +1,20 @@
 <template>
-  <div class="meal container">
-    <form v-if="editing" class="meal" @submit.prevent="$emit('update', meal_edit); editing=false" @keydown.esc="editing=false">
-      <input class="minutes_since_midnight" type="number" v-model="meal_edit.minutes_since_midnight" />
+  <tr v-if="editing">
+    <form class="meal" @submit.prevent="$emit('update', meal_edit); editing=false" @keydown.esc="editing=false">
+      <td><input class="minutes_since_midnight" type="number" v-model="meal_edit.minutes_since_midnight" /></td>
       <input class="foods" ref="foods" v-model="meal_edit.foods" />
       <button type="submit">Submit</button>
       <button type="button" @click="editing=false">Cancel</button>
       <button type="button" @click="$emit('delete', meal_edit)" data-confirm="Are you sure?">Delete</button>
     </form>
-    <div v-else>
-      <span class="time">{{ meal.time_string }}</span>
-      <span class="foods">Foods = {{ meal.foods }}</span>
-      <button @click="startEditing">Edit</button>
-      <button @click="$emit('delete', meal)" data-confirm="Are you sure?">Delete</button>
-    </div>
-  </div>
+  </tr>
+
+  <tr v-else>
+    <td class="time">{{ meal.time_string }}</td>
+    <td class="foods">{{ meal.foods }}</td>
+    <td><button @click="startEditing">Edit</button></td>
+    <td><button @click="$emit('delete', meal)" data-confirm="Are you sure?">Delete</button></td>
+  </tr>
 </template>
 
 <script>

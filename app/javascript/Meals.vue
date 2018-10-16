@@ -1,18 +1,31 @@
 <template>
-  <table>
-    <Meal v-for="meal in meals"
-      v-bind:meal="meal"
-      v-bind:key="meal.id"
-      v-on:update="onUpdateMeal"
-      v-on:delete="onDeleteMeal" />
+  <div class="meals">
+    <table>
+      <tr>
+        <th class="time">Time</th>
+        <th class="foods">Foods</th>
+        <th class="category">Veggies</th>
+        <th class="category">Fruits</th>
+        <th class="category">Proteins</th>
+        <th class="category">Carbs</th>
+        <th class="category">Fats</th>
+        <th class="category">Seeds</th>
+        <th class="category">Oils</th>
+      </tr>
+      <Meal v-for="meal in meals"
+        v-bind:meal="meal"
+        v-bind:key="meal.id"
+        v-on:update="onUpdateMeal"
+        v-on:delete="onDeleteMeal" />
+    </table>
     <NewMeal v-on:create="onCreateMeal" />
-  </table>
+  </div>
 </template>
 
 <script>
-import Meal from './Meal.vue'
-import NewMeal from './NewMeal.vue'
-import * as APIs from './apis.js'
+import Meal from 'Meal.vue'
+import NewMeal from 'NewMeal.vue'
+import * as APIs from 'apis.js'
 export default {
   components: {
     Meal,

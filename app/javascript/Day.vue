@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Meals from './Meals.vue'
+import Meals from 'Meals.vue'
 export default {
   components: {
     Meals

@@ -49,7 +49,7 @@ export default {
       this.meals = meals
     },
 
-    onCreateMeal(task) {
+    onCreateMeal(meal) {
       console.log("*** onCreateMeal()")
       console.log(meal)
       APIs.createMeal(this.$props.day.id, meal, this.fetchMeals)

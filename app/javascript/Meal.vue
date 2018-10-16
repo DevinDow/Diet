@@ -7,7 +7,7 @@
       <button type="button" @click="editing=false">Cancel</button>
       <button type="button" @click="$emit('delete', meal_edit)" data-confirm="Are you sure?">Delete</button>
     </form>
-    <div v-else v-bind="attrs">
+    <div v-else>
       <span class="time">{{ meal.time_string }}</span>
       <span class="foods">Foods = {{ meal.foods }}</span>
       <button @click="startEditing">Edit</button>
@@ -29,17 +29,11 @@ export default {
     }
   },
 
-  computed: {
-    attrs: function() {
-      return this.$props.meal.done ? { class: "meal completed" } : { class: "meal" }
-    }
-  },
-
   methods: {
     startEditing() {
-      this.task_edit = JSON.parse(JSON.stringify(this.$props.meal)) // copy props.meal to meal_edit so we can cancel without modifying props.meal
+      this.meal_edit = JSON.parse(JSON.stringify(this.$props.meal)) // copy props.meal to meal_edit so we can cancel without modifying props.meal
       this.editing=true;
-      this.$nextTick(() => this.$refs.name.focus())
+      this.$nextTick(() => this.$refs.foods.focus())
     }
   }
 }

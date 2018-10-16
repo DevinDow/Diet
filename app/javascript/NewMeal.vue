@@ -1,6 +1,6 @@
 <template>
   <form v-if="creating" class="meal" @submit.prevent="$emit('create', meal); creating=false" @keydown.esc="creating=false">
-    <input class="minutes_since_midnight" type="minutes_since_midnight" v-model="meal.prminutes_since_midnightiority" />
+    <input class="minutes_since_midnight" type="number" v-model="meal.minutes_since_midnight" />
     <input class="foods" ref="foods" v-model="meal.foods" autofocus />
     <button type="submit">Create</button>
     <button type="button" @click="creating=false">Cancel</button>
@@ -23,7 +23,7 @@ export default {
     startCreating() {
       this.creating=true
       this.meal = {priority: 1}
-      this.$nextTick(() => this.$refs.name.focus())
+      this.$nextTick(() => this.$refs.foods.focus())
     }
   }
 }

@@ -6,7 +6,9 @@ function getToken() {
 
 export function fetchToday(setDay) {
   console.log("fetching Today")
-  fetch('/today.json')
+  var date = new Date(Date.now())
+  console.log(date)
+  fetch('/today.json?date='+date.toJSON().substring(0,10))
     .then((response) => {
       return response.json()
     })

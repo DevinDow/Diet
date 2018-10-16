@@ -1,14 +1,16 @@
 # Diet TODO
 
+## Issues
+- totals undefined in Days#show
+
 ## Vue SPA
 
-- GET /today.json might need to create new Day
-  - need to worry about TimeZone
-    - JS should pass in browser's current Date Time
+- Edit Today's Plan, Fitness, Notes, Totals
 - Delete data-confirm="Are you sure?" happens after $emit(), so doesn't cancel
 
 ## Time Selection
 
+- JS pass in time
 - <select> https://vuejs.org/v2/guide/forms.html#Select-Options
 
 ## Models

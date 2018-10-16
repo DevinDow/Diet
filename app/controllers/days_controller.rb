@@ -10,8 +10,15 @@ class DaysController < ApplicationController
   # GET /today
   # GET /today.json
   def today
-    @day = Day.order(:date).last
-  end
+    puts params[:date]
+    @day = Day.where(date: params[:date]).first # find today by date passed in from JS
+    puts @day.inspect
+    if !@day
+      @day = Day.new(date: params[:date]) # create today
+      @day.save()
+      puts @day.inspect
+    end
+    end
 
   # GET /days/1
   # GET /days/1.json

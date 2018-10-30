@@ -18,7 +18,7 @@ class DaysController < ApplicationController
       @day.save()
       puts @day.inspect
     end
-    end
+  end
 
   # GET /days/1
   # GET /days/1.json

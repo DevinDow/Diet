@@ -6,13 +6,35 @@ class Day < ApplicationRecord
   end
 
   def totals
-    t = Array.new(7, 0)
+    tot = Array.new(7, 0)
     meals.each do |m|
       m.categories.each_with_index do |c, i|
-        t[i] = t[i].to_f + c.to_f
+        tot[i] = tot[i].to_f + c.to_f
       end
     end
-    t
+    tot
+  end
+
+  def targets
+    targ = Array.new(7, 0)
+    targ[0] = 4
+    targ[1] = 3
+    targ[2] = 4
+    targ[3] = 3
+    targ[4] = 1
+    targ[5] = 1
+    targ[6] = 3
+    targ
+  end
+
+  def remainders
+    tot = totals
+    targ = targets
+    rem = Array.new(7, 0)
+    tot.each do |i|
+      rem[i] = targ[i] - tot[i]
+    end
+    rem
   end
 
 end

@@ -8,7 +8,9 @@ export function fetchToday(setDay) {
   console.log("fetching Today")
   var date = new Date(Date.now())
   console.log(date)
-  fetch('/today.json?date='+date.toJSON().substring(0,10))
+  var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`
+  console.log(dateString)
+  fetch('/today.json?date='+dateString)
     .then((response) => {
       return response.json()
     })

@@ -2,7 +2,9 @@
 
 ## Vue SPA
 
+- strikethrough categories <= 0
 - Edit Today's Plan, Fitness, Notes, Totals
+- dropdown for categories might be easier on mobile
 - Delete data-confirm="Are you sure?" happens after $emit(), so doesn't cancel
 
 ## Time Selection

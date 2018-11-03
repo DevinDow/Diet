@@ -30,13 +30,13 @@
       </tr>
       <tr>
         <td class="heading">Remaining</td>
-        <td class="category veggies remainder">{{ remainders[0] }}</td>
-        <td class="category fruits remainder">{{ remainders[1] }}</td>
-        <td class="category proteins remainder">{{ remainders[2] }}</td>
-        <td class="category carbs remainder">{{ remainders[3] }}</td>
-        <td class="category fats remainder">{{ remainders[4] }}</td>
-        <td class="category seeds remainder">{{ remainders[5] }}</td>
-        <td class="category oils remainder">{{ remainders[6] }}</td>
+        <td class="category veggies remainder" v-bind:class="{ done: remainders[0]<=0 }">{{ remainders[0] }}</td>
+        <td class="category fruits remainder" v-bind:class="{ done: remainders[1]<=0 }">{{ remainders[1] }}</td>
+        <td class="category proteins remainder" v-bind:class="{ done: remainders[2]<=0 }">{{ remainders[2] }}</td>
+        <td class="category carbs remainder" v-bind:class="{ done: remainders[3]<=0 }">{{ remainders[3] }}</td>
+        <td class="category fats remainder" v-bind:class="{ done: remainders[4]<=0 }">{{ remainders[4] }}</td>
+        <td class="category seeds remainder" v-bind:class="{ done: remainders[5]<=0 }">{{ remainders[5] }}</td>
+        <td class="category oils remainder" v-bind:class="{ done: remainders[6]<=0 }">{{ remainders[6] }}</td>
         <td class="foods"></td>
       </tr>
     </table>

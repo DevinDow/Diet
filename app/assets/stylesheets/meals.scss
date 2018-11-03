@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+table {
+  border-collapse: separate;
+  border-spacing: 3px;
+}
+
 .time, .time input {
   width: 50px;
 }
@@ -13,6 +18,7 @@
 .category, .category input {
   text-align: center;
   width: 50px;
+  margin: 3px;
 }
 
 .heading {
@@ -32,29 +38,29 @@
 }
 
 .veggies {
-  color: green;
+  background: limegreen;
 }
 
 .fruits {
-  color: purple;
+  background: mediumpurple;
 }
 
 .proteins {
-  color: red;
+  background: red;
 }
 
 .carbs {
-  color: rgb(200, 200, 0);
+  background: rgb(200, 200, 0);
 }
 
 .fats {
-  color: blue;
+  background: cornflowerblue;
 }
 
 .seeds {
-  color: orange;
+  background: orange;
 }
 
 .oils {
-  color: gray;
+  background: gray;
 }

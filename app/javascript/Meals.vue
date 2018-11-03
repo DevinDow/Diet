@@ -17,7 +17,7 @@
         v-bind:key="meal.id"
         v-on:update="onUpdateMeal"
         v-on:delete="onDeleteMeal" />
-      <tr>
+      <tr class="top-border">
         <td class="heading">Totals</td>
         <td class="category veggies total">{{ totals[0] }}</td>
         <td class="category fruits total">{{ totals[1] }}</td>
@@ -28,7 +28,7 @@
         <td class="category oils total">{{ totals[6] }}</td>
         <td class="foods"></td>
       </tr>
-      <tr>
+      <tr class="top-border">
         <td class="heading">Remaining</td>
         <td class="category veggies remainder" v-bind:class="{ done: remainders[0]<=0 }">{{ remainders[0] }}</td>
         <td class="category fruits remainder" v-bind:class="{ done: remainders[1]<=0 }">{{ remainders[1] }}</td>

@@ -39,8 +39,8 @@
         <td class="category oils remainder" v-bind:class="{ done: remainders[6]<=0 }">{{ remainders[6] }}</td>
         <td class="foods"></td>
       </tr>
+      <NewMeal v-on:create="onCreateMeal" />
     </table>
-    <NewMeal v-on:create="onCreateMeal" />
   </div>
 </template>
 

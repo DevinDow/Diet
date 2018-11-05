@@ -4,7 +4,6 @@
 
 - Edit Today's Plan, Fitness, Notes, Totals
 - dropdown for categories might be easier on mobile
-- view yesterday ('<' or calendar or list)
 - Delete data-confirm="Are you sure?" happens after $emit(), so doesn't cancel
 
 ## Time Selection

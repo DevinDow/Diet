@@ -1,5 +1,6 @@
 <template>
   <div id="today">
+    <button @click="fetchYesterday">Yesterday</button>
     <Day v-if="day" v-bind:day="day" />
   </div>
 </template>
@@ -27,6 +28,10 @@ export default {
   methods: {
     fetchToday() {
       APIs.fetchToday(this.setDay)
+    },
+
+    fetchYesterday() {
+      APIs.fetchYesterday(this.setDay)
     },
 
     setDay(day) {

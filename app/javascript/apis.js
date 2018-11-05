@@ -10,12 +10,26 @@ export function fetchToday(setDay) {
   console.log(date)
   var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`
   console.log(dateString)
+  fetchDate(dateString, setDay)
+}
+
+export function fetchYesterday(setDay) {
+  console.log("fetching Yesterday")
+  var date = new Date(Date.now())
+  date.setDate(date.getDate()-1);
+  console.log(date)
+  var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`
+  console.log(dateString)
+  fetchDate(dateString, setDay)
+}
+
+function fetchDate(dateString, setDay) {
   fetch('/today.json?date='+dateString)
     .then((response) => {
       return response.json()
     })
     .then((data) => {
-      console.log("fetched Today")
+      console.log("fetched date")
       console.log(data)
       setDay(data)
     });

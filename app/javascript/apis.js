@@ -7,29 +7,27 @@ function getToken() {
 export function fetchToday(setDay) {
   console.log("fetching Today")
   var date = new Date(Date.now())
-  console.log(date)
-  var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`
-  console.log(dateString)
-  fetchDate(dateString, setDay)
+  fetchDate(date, setDay)
 }
 
 export function fetchYesterday(setDay) {
   console.log("fetching Yesterday")
   var date = new Date(Date.now())
-  date.setDate(date.getDate()-1);
-  console.log(date)
-  var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`
-  console.log(dateString)
-  fetchDate(dateString, setDay)
+  date.setDate(date.getDate()-1); // Yesterday = now()'s date - 1
+  fetchDate(date, setDay)
 }
 
-function fetchDate(dateString, setDay) {
+function fetchDate(date, setDay) {
+  console.log("fetching date")
+  console.log(date)
+  var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}` // Months are 0-11
+  console.log(dateString)
   fetch('/today.json?date='+dateString)
     .then((response) => {
       return response.json()
     })
     .then((data) => {
-      console.log("fetched date")
+      console.log("fetched Day")
       console.log(data)
       setDay(data)
     });

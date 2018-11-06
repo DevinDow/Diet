@@ -1,14 +1,22 @@
 # Diet TODO
 
+## Mobile
+
+- add Today route
+- update ERBs to match Vue changes
+- dropdown for Category count might be easier on mobile
+- Layout for small form-factor should have "Foods" below Categories
+
+## Time Selection
+
+- <%= form.time_select :time_of_day %>
+
 ## Vue SPA
 
 - Edit Today's Plan, Fitness, Notes, Totals
 - dropdown for categories might be easier on mobile
+  -  `<select>` https://vuejs.org/v2/guide/forms.html#Select-Options
 - Delete data-confirm="Are you sure?" happens after $emit(), so doesn't cancel
-
-## Time Selection
-
-- `<select>` https://vuejs.org/v2/guide/forms.html#Select-Options
 
 ## Models
 

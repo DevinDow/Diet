@@ -18,6 +18,10 @@ class DaysController < ApplicationController
       @day.save()
       puts @day.inspect
     end
+    respond_to do |format|
+      format.html { redirect_to @day }
+      format.json { render json: @day }
+    end
   end
 
   # GET /days/1

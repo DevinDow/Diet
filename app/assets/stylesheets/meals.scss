@@ -1,3 +1,65 @@
 // Place all the styles related to the Meals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+tr.top-border td {
+  border-top: 2px solid black;
+}
+
+.time, .time input {
+  width: 50px;
+}
+
+.foods, .foods input {
+  width: 300px;
+}
+
+.category, .category input {
+  text-align: center;
+  width: 50px;
+  margin: 3px;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.remainder {
+  font-weight: bold;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.veggies {
+  background: limegreen;
+}
+
+.fruits {
+  background: mediumpurple;
+}
+
+.proteins {
+  background: red;
+}
+
+.carbs {
+  background: rgb(200, 200, 0);
+}
+
+.fats {
+  background: cornflowerblue;
+}
+
+.seeds {
+  background: orange;
+}
+
+.oils {
+  background: gray;
+}

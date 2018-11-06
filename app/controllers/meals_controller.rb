@@ -1,6 +1,12 @@
 class MealsController < ApplicationController
-  before_action :set_day, only: [:new, :create]
+  before_action :set_day, only: [:index, :new, :create]
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
+
+  # GET /days/:day_id/meals/1
+  # GET /days/:day_id/meals/1.json
+  def index
+    @meals = @day.meals.order(:minutes_since_midnight).all
+  end
 
   # GET /meals/1
   # GET /meals/1.json
@@ -10,7 +16,10 @@ class MealsController < ApplicationController
   # GET /days/:day_id/meals/new
   def new
     @meal = Meal.new
-    @meal.time_of_day = Time.new
+    Time.zone = 'Pacific Time (US & Canada)'
+    @meal.time_of_day = Time.zone.now
+    puts @meal.time_of_day
+    puts @meal.time_of_day.zone
   end
 
   # GET /meals/1/edit
@@ -67,14 +76,16 @@ class MealsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_day
       @day = Day.find(params[:day_id])
+      puts @day.inspect
     end
 
     def set_meal
       @meal = Meal.find(params[:id])
+      puts @meal.inspect
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meal_params
-      params.require(:meal).permit(:time, :time_of_day, :foods, :categories => [])
+      params.require(:meal).permit(:minutes_since_midnight, :foods, :categories => [])
     end
 end

@@ -4,7 +4,20 @@ class DaysController < ApplicationController
   # GET /days
   # GET /days.json
   def index
-    @days = Day.all
+    @days = Day.order(:date).all
+  end
+
+  # GET /today
+  # GET /today.json
+  def today
+    puts params[:date]
+    @day = Day.where(date: params[:date]).first # find today by date passed in from JS
+    puts @day.inspect
+    if !@day
+      @day = Day.new(date: params[:date]) # create today
+      @day.save()
+      puts @day.inspect
+    end
   end
 
   # GET /days/1

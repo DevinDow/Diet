@@ -1,16 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 breakfast:
-  time: 7*60  # 7:00am
+  minutes_since_midnight: 7*60  # 7:00am
   foods: Eggs & Bacon & Toast
   day: day1
 
 lunch:
-  time: 12*60  # 12:00pm
+  minutes_since_midnight: 12*60  # 12:00pm
   foods: Salad
   day: day1
 
 dinner:
-  time: 18*60  # 6:00pm
+  minutes_since_midnight: 18*60  # 6:00pm
   foods: Fish & Rice
   day: day1

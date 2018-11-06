@@ -16,7 +16,7 @@
   <tbody>
     <% @days.each do |day| %>
       <tr>
-        <td><%= link_to day.pp, day %></td>
+        <td><%= link_to day.day_string, day %></td>
         <td><%= day.plan %></td>
         <td><%= day.fitness %></td>
         <td><%= day.notes %></td>

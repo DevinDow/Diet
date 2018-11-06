@@ -20,7 +20,6 @@
   <thead>
     <tr>
       <th class="time">Time</th>
-      <th class="foods">Foods</th>
       <th class="category veggies">Veggies</th>
       <th class="category fruits">Fruits</th>
       <th class="category proteins">Proteins</th>
@@ -28,13 +27,13 @@
       <th class="category fats">Fats</th>
       <th class="category seeds">Seeds</th>
       <th class="category oils">Oils</th>
+      <th class="foods">Foods</th>
     </tr>
   </thead>
 
   <tbody>
     <%= render @day.meals %>
     <td class="time total">TOTALS</td>
-    <td class="foods"></td>
     <td class="category veggies total"><%= @day.totals[0] %></td>
     <td class="category fruits total"><%= @day.totals[1] %></td>
     <td class="category proteins total"><%= @day.totals[2] %></td>
@@ -42,6 +41,7 @@
     <td class="category fats total"><%= @day.totals[4] %></td>
     <td class="category seeds total"><%= @day.totals[5] %></td>
     <td class="category oils total"><%= @day.totals[6] %></td>
+    <td class="foods"></td>
   </tbody>
 </table>
 

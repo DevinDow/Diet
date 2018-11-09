@@ -2,7 +2,7 @@
 
 ## Mobile
 
-- /today route - current /today requires JS to pass browser's date
+- Calendar Picker instead of Yesterday button
 - dropdown for Category count might be easier on mobile
 - Layout for small form-factor should have "Foods" below Categories
 

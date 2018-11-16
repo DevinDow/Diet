@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Days & Meals
   get 'today', to: 'days#today'
+  get 'date', to: 'days#date'
   resources :days do
     resources :meals, shallow: true
   end

@@ -8,8 +8,12 @@ class DaysController < ApplicationController
   end
 
   # GET /today
-  # GET /today.json
   def today
+  end
+
+  # GET /date
+  # GET /date.json
+  def date
     puts params[:date]
     @day = Day.where(date: params[:date]).first # find today by date passed in from JS
     puts @day.inspect
@@ -18,7 +22,12 @@ class DaysController < ApplicationController
       @day.save()
       puts @day.inspect
     end
-    @day
+
+    respond_to do |format|
+      format.html { redirect_to @day, notice: 'Day was successfully created.' }
+      format.json { render :show, status: :created, location: @day }
+    end
+    
   end
 
   # GET /days/1

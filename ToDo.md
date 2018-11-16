@@ -1,7 +1,6 @@
 # Diet TODO
 
 - /days/{day_id} should have buttons for navigating prev & next Day
-- /today for ERBs/mobile
 
 ## Time Selection
 

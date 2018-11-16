@@ -1,0 +1,9 @@
+<script>
+  console.log("fetching Today")
+  var date = new Date(Date.now())
+  console.log(date)
+  var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}` // Months are 0-11
+  console.log(dateString)
+  fetch('/date.json?date='+dateString)
+  window.location.replace('/date?date='+dateString);
+</script>

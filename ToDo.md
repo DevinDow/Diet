@@ -1,10 +1,7 @@
 # Diet TODO
 
-## Mobile
-
-- Calendar Picker instead of Yesterday button
-- dropdown for Category count might be easier on mobile
-- Layout for small form-factor should have "Foods" below Categories
+- /days/{day_id} should have buttons for navigating prev & next Day
+- /today for ERBs/mobile
 
 ## Time Selection
 
@@ -17,12 +14,11 @@
   -  `<select>` https://vuejs.org/v2/guide/forms.html#Select-Options
 - Delete data-confirm="Are you sure?" happens after $emit(), so doesn't cancel
 
-## Models
+## Mobile
 
-* Days
-  * Day Categories Target
-  * Day Categories Remaining 
-- Users (Devise or build?)
+- Calendar Picker instead of Yesterday button
+- dropdown for Category count might be easier on mobile
+- Layout for small form-factor should have "Foods" below Categories
 
 ## Functionality
 
@@ -33,9 +29,9 @@
 
 - add an Index for Days by ID
 
-## Issues
+## Models
 
-- https://diet-devindow.herokuapp.com/days/1 => undefined method `categories' for #<Meal  -  <td class="category"><%= meal.categories[0] %></td>
+- Users (Devise or build?)
 
 ## Tests
 

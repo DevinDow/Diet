@@ -1,6 +1,6 @@
 # Diet TODO
 
-- /days/{day_id} should have buttons for navigating prev & next Day
+- New Meal needs to use JS to get browser time
 
 ## Time Selection
 

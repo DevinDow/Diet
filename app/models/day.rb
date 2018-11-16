@@ -5,6 +5,14 @@ class Day < ApplicationRecord
     date.strftime("%A %b %d, %Y") if date
   end
 
+  def yesterday
+    date-1
+  end
+
+  def tomorrow
+    date+1
+  end
+
   def totals
     tot = Array.new(7, 0)
     meals.each do |m|

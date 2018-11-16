@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @day.day_string %></h2>
+<h2>
+  <%= link_to '<<', date_path(:date => @day.yesterday) %>
+  <%= @day.day_string %>
+  <%= link_to '>>', date_path(:date => @day.tomorrow) %>
+</h2>
 
 <p>
   <strong>Plan:</strong>

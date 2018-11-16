@@ -24,7 +24,7 @@ class DaysController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to @day, notice: 'Day was successfully created.' }
+      format.html { redirect_to @day }
       format.json { render :show, status: :created, location: @day }
     end
     
@@ -33,6 +33,7 @@ class DaysController < ApplicationController
   # GET /days/1
   # GET /days/1.json
   def show
+    puts @day.inspect
   end
 
   # GET /days/new

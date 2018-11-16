@@ -22,7 +22,7 @@ function fetchDate(date, setDay) {
   console.log(date)
   var dateString = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}` // Months are 0-11
   console.log(dateString)
-  fetch('/today.json?date='+dateString)
+  fetch('/date.json?date='+dateString)
     .then((response) => {
       return response.json()
     })

@@ -1,7 +1,7 @@
 # Diet TODO
 
 - /days/{day_id} should have buttons for navigating prev & next Day
-- /today for ERBs/mobile
+- /today for ERBs/mobile (needs JS to set {date} param)
 
 ## Time Selection
 

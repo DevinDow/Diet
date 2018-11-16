@@ -22,7 +22,12 @@ class DaysController < ApplicationController
       @day.save()
       puts @day.inspect
     end
-    @day
+
+    respond_to do |format|
+      format.html { redirect_to @day, notice: 'Day was successfully created.' }
+      format.json { render :show, status: :created, location: @day }
+    end
+    
   end
 
   # GET /days/1

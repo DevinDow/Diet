@@ -1,6 +1,11 @@
 # Diet TODO
 
+- Vue's "Yesterday" button should clear all since yesterday might not return anything.
 - New Meal needs to use JS to get browser time
+- days#show ERB show Remaining
+
+1. edit Targets
+2. edit Time
 
 ## Time Selection
 

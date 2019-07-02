@@ -1,15 +1,13 @@
 # Diet TODO
 
+- Rounding in addition makes 0.25+0.25=0.6
+- edit Targets
+
 - Vue's "Yesterday" button should clear all since yesterday might not return anything.
 - New Meal needs to use JS to get browser time
 - days#show ERB show Remaining
 
-1. edit Targets
-2. edit Time
-
 ## Time Selection
-
-- <%= form.time_select :time_of_day %>
 
 ## Vue SPA
 

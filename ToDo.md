@@ -1,5 +1,9 @@
 # Diet TODO
 
+- ping server time
+  - return server time
+    - javascript | views | home | time.json.jbuilder
+
 - Rounding in addition makes 0.25+0.25=0.6
 - edit Targets
 

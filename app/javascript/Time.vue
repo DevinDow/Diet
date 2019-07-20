@@ -24,8 +24,12 @@ export default {
     pingTime() {
       console.log("Pinging Time")
       this.pinging = true
-      APIs.fetchTime()
-    }
+      APIs.fetchTime(this.setTime)
+    },
+
+    setTime(time) {
+      this.pinging = false
+    },
   }
 }
 </script>

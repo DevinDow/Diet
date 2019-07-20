@@ -19,6 +19,7 @@ export function fetchTime(setTime) {
     .then((data) => {
       console.log("fetched Time")
       console.log(data)
+      setTime(data)
     });
 }
 

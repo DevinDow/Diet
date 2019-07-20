@@ -3,6 +3,7 @@
 - ping server time
   - return server time
     - javascript | views | home | time.json.jbuilder
+  - Ping Time layout on one line
 
 - Rounding in addition makes 0.25+0.25=0.6
 - edit Targets

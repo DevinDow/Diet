@@ -2,6 +2,7 @@
 
 - ping server time
   - return server time
+    - app | controllers | home_controller.rb
     - javascript | views | home | time.json.jbuilder
   - Ping Time layout on one line
 

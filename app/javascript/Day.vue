@@ -5,14 +5,17 @@
     <div class="fitness">Fitness = {{ day.fitness }}</div>
     <Meals v-bind:day="day" />
     <div class="notes">Notes = {{ day.notes }}</div>
+    <Time />
   </div>
 </template>
 
 <script>
 import Meals from 'Meals.vue'
+import Time from 'Time.vue'
 export default {
   components: {
-    Meals
+    Meals,
+    Time
   },
 
   props: ["day"],

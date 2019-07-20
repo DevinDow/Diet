@@ -10,6 +10,19 @@ export function fetchToday(setDay) {
   fetchDate(date, setDay)
 }
 
+export function fetchTime(setTime) {
+  console.log("fetching Time")
+  fetch('/time.json')
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      console.log("fetched Time")
+      console.log(data)
+      setTime(data)
+    });
+}
+
 export function fetchYesterday(setDay) {
   console.log("fetching Yesterday")
   var date = new Date(Date.now())

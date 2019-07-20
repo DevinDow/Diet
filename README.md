@@ -15,4 +15,5 @@ This is a web app for tracking foods eaten based on [BeachBody's 21 Day Fix](htt
 
 ## Debugging
 - rails s{erver}
-- use Browser Developer Tools {F12}
+- watch Terminal for debugging Backend
+- use Browser Developer Tools {F12} for debugging Vue

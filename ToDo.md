@@ -6,6 +6,8 @@
     - javascript | views | home | time.json.jbuilder
   - Ping Time layout on one line
 
+- refresh page if page is from a previous date
+
 - Rounding in addition makes 0.25+0.25=0.6
 - edit Targets
 

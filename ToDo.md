@@ -1,12 +1,17 @@
 # Diet TODO
 
+- show HTTP Errors
+- Calories from Macros with percentage of total (should I show Targets?)
+- Fasting Duration
+  - only consider Meals with a Macro entry
+
 - ping server time
   - return server time
     - app | controllers | home_controller.rb
     - javascript | views | home | time.json.jbuilder
   - Ping Time layout on one line
 
-- refresh page if page is from a previous date
+- refresh page if page is from a previous date?  What about trying to enter old meals?
 
 - Rounding in addition makes 0.25+0.25=0.6
 - edit Targets

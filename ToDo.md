@@ -1,7 +1,6 @@
 # Diet TODO
 
 - show HTTP Errors
-- Calories from Macros with percentage of total (should I show Targets?)
 - Fasting Duration
   - only consider Meals with a Macro entry
   - Fasting History view?

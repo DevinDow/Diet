@@ -22,6 +22,6 @@ This is a web app for tracking foods eaten based on [BeachBody's 21 Day Fix](htt
   - commiting to GitHub updates Heroku
 
 ## Debugging
-- rails s{erver}
+- rails s{erver} - http://localhost:3000/
 - watch Terminal for debugging Backend
 - use Browser Developer Tools {F12} for debugging Vue

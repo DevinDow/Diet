@@ -6,8 +6,16 @@ This is a web app for tracking foods eaten based on [BeachBody's 21 Day Fix](htt
 - Ruby on Rails
 
 ## UI
-- **Vue** for single-page app at */today*
+- **Vue** for single-page app at *root*
+  - *home#index*
+    - App vue
+      - APIs.fetchToday()
+      - Day vue
+        - Meals vue
+          - Meal vue
+          - NewMeal vue
 - other REST routes (*/days*, */meals*, etc) for standard Rails ERB implementation
+  - */today* view uses JS to reroute to today's date at */day?date=*
 
 # Development
 - Hosted on Heroku

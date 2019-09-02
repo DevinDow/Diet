@@ -120,7 +120,6 @@ export default {
 
       // totals from meals
       this.totals = [0, 0, 0, 0, 0, 0, 0] // Veg, Fruit, Protein, Carbs, Fat, Seeds, Oil
-      this.calories = [0, 0, 0, 0, 0, 0, 0] // Protein, Carbs, Fat, Total, %, %, %
       var m
       for (m=0; m<this.meals.length; m++) {
         var meal = this.meals[m]
@@ -136,13 +135,16 @@ export default {
       }
 
       // calculate calories
+      this.calories = [0, 0, 0, 0, 0, 0, 0] // Protein, Carbs, Fat, Total, %, %, %
       this.calories[0] = this.totals[2] * 150 // Protein
       this.calories[1] = parseFloat(this.totals[1]) * 75 + parseFloat(this.totals[3]) * 110 // Carbs
       this.calories[2] = parseFloat(this.totals[4]) * 130 + parseFloat(this.totals[5]) * 105 + parseFloat(this.totals[6]) * 36 // Fat
       this.calories[3] = parseFloat(this.calories[0]) + parseFloat(this.calories[1]) + parseFloat(this.calories[2]) // Totals
-      this.calories[4] = (parseFloat(this.calories[0]) / parseFloat(this.calories[3]) * 100).toFixed(0) // Protein %
-      this.calories[5] = (parseFloat(this.calories[1]) / parseFloat(this.calories[3]) * 100).toFixed(0) // Carbs %
-      this.calories[6] = (parseFloat(this.calories[2]) / parseFloat(this.calories[3]) * 100).toFixed(0) // Fat %
+      if (this.calories[3] > 0) {
+        this.calories[4] = (parseFloat(this.calories[0]) / parseFloat(this.calories[3]) * 100).toFixed(0) // Protein %
+        this.calories[5] = (parseFloat(this.calories[1]) / parseFloat(this.calories[3]) * 100).toFixed(0) // Carbs %
+        this.calories[6] = (parseFloat(this.calories[2]) / parseFloat(this.calories[3]) * 100).toFixed(0) // Fat %
+      }
     }
   }
 }

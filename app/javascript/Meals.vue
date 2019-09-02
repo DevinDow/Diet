@@ -26,7 +26,7 @@
         <td class="category fats total">{{ totals[4] }}</td>
         <td class="category seeds total">{{ totals[5] }}</td>
         <td class="category oils total">{{ totals[6] }}</td>
-        <td class="foods">{{ calories[0] }} P={{ calories[4]}}% + {{ calories[1] }} C={{ calories[5]}}% + {{ calories[2] }} F={{ calories[6]}}% = {{ calories[3] }} Calories</td>
+        <td class="foods">{{ calories[0] }} P={{ calories[4]}}% + {{ calories[1] }} C={{ calories[5]}}% + {{ calories[2] }} F={{ calories[6]}}% = {{ calories[3] }} cal</td>
       </tr>
       <tr class="top-border">
         <td class="heading">Targets</td>
@@ -137,7 +137,7 @@ export default {
       // calculate calories
       this.calories = [0, 0, 0, 0, 0, 0, 0] // Protein, Carbs, Fat, Total, %, %, %
       this.calories[0] = this.totals[2] * 150 // Protein
-      this.calories[1] = parseFloat(this.totals[1]) * 75 + parseFloat(this.totals[3]) * 110 // Carbs
+      this.calories[1] = parseFloat(this.totals[0]) * 40 + parseFloat(this.totals[1]) * 75 + parseFloat(this.totals[3]) * 110 // Carbs
       this.calories[2] = parseFloat(this.totals[4]) * 130 + parseFloat(this.totals[5]) * 105 + parseFloat(this.totals[6]) * 36 // Fat
       this.calories[3] = parseFloat(this.calories[0]) + parseFloat(this.calories[1]) + parseFloat(this.calories[2]) // Totals
       if (this.calories[3] > 0) {

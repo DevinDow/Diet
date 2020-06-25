@@ -18,7 +18,7 @@ This is a web app for tracking foods eaten based on [BeachBody's 21 Day Fix](htt
   - */today* view uses JS to reroute to today's date at */day?date=*
 
 # Development
-- Hosted on Heroku
+- Hosted on Heroku: https://diet-devindow.herokuapp.com/
   - commiting to GitHub updates Heroku
 
 ## Debugging
